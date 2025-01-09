@@ -33,7 +33,7 @@
                     <circle cx="12" cy="11" r="3" />
                     <path d="M17.657 16.657L13.414 20.9a1.998 1.998 0 0 1 -2.827 0l-4.244-4.243a8 8 0 1 1 11.314 0z" />
                 </svg>
-                <p>Guadalajara, Jalisco</p>
+                <p>Monterrey, Nuevo Leon</p>
             </div>
             <a class="boton" href="#">Contactar</a>
         </div> <!-- .contenido-hero --> 
@@ -98,41 +98,43 @@
         <section>
             <h2>Contacto</h2>
 
-            <form class="formulario">
+            <form class="formulario" id="contactForm">
                 <fieldset>
                     <legend>Contactános llenando todos los campos</legend>
-
+            
                     <div class="contenedor-campos">
                         <div class="campo">
                             <label>Nombre</label>
-                            <input class="input-text" type="text" placeholder="Tu Nombre">
+                            <input class="input-text" id="name" type="text" placeholder="Tu Nombre" required>
                         </div>
-
+            
                         <div class="campo">
                             <label>Teléfono</label>
-                            <input class="input-text" type="tel" placeholder="Tu Teléfono">
+                            <input class="input-text" id="number" type="tel" placeholder="Tu Teléfono" required>
                         </div>
-
+            
                         <div class="campo">
                             <label>Correo</label>
-                            <input class="input-text" type="email" placeholder="Tu Email">
+                            <input class="input-text" id="email" type="email" placeholder="Tu Email" required>
                         </div>
-                
+            
                         <div class="campo">
                             <label>Mensaje</label>
-                            <textarea class="input-text"></textarea>
+                            <textarea class="input-text" id="message" required></textarea>
                         </div>
                     </div> <!-- .contenedor-campos -->
-
+            
                     <div class="alinear-derecha flex">
                         <input class="boton w-sm-100" type="submit" value="Enviar">
                     </div>
                 </fieldset>
             </form>
+            
         </section>
 
     </main>
     
+    <script src="script1.js"></script>
     <footer class="footer">
         <p>Todos los derechos reservados. Juan De la torre Freelancer</p>
     </footer>
