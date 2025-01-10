@@ -1,8 +1,8 @@
 :root {
     --blanco: #ffffff;
     --oscuro: #212121;
-    --primario: #FFC107;
-    --secundario: #0097A7;
+    --primario: #df3a3a;
+    --secundario: #7c2424;
     --gris: #757575;
     --grisClaro: #DFE9F3;
 }
@@ -15,7 +15,7 @@ html {
 /** Scroll Snap**/
 .servicios,
 .navegacion-principal,
-.formulario {
+.formulario, .sobreMi {
     scroll-snap-align: center;
     scroll-snap-stop: always;
 }
@@ -31,6 +31,15 @@ body {
 .contenedor {
     max-width: 120rem;
     margin: 0 auto;
+}
+.logo {
+    animation: blink 3s linear infinite;
+}
+
+@keyframes blink {
+    0% { opacity: 1; }
+    50% { opacity: 0; }
+    100% { opacity: 1; }
 }
 .boton {
     background-color: var(--secundario);
@@ -210,7 +219,7 @@ h1,h2,h3 {
     text-transform: uppercase;
     font-weight: 700;
     margin-bottom: 2rem;
-    color: var(--primario);
+    color: var(--oscuro);
 }
 
 @media (min-width: 768px) {
@@ -249,4 +258,75 @@ h1,h2,h3 {
 /** Footer **/
 .footer {
     text-align: center;
+}
+
+.about-section {
+    max-width: 900px;
+    margin: 50px auto;
+    padding: 20px;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.about-title {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    text-align: center;
+    color: #444;
+}
+
+.about-content {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.about-text {
+    flex: 1 1 60%;
+    padding: 10px 20px;
+}
+
+.about-text p {
+    margin: 10px 0;
+}
+
+.about-photo {
+    flex: 1 1 30%;
+    text-align: center;
+}
+
+.about-photo img {
+    max-width: 100%;
+    border-radius: 50%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.skills {
+    margin-top: 20px;
+}
+
+.skills h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    color: #444;
+}
+
+.skills ul {
+    list-style: none;
+    padding: 0;
+}
+
+.skills ul li {
+    margin: 5px 0;
+    padding: 5px;
+    background: #f0f0f0;
+    border-radius: 5px;
+    display: inline-block;
+}
+
+.universidad {
+    display: flex;
+    align-items: center;
 }

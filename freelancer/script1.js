@@ -18,7 +18,7 @@ document.getElementById('contactForm').addEventListener('submit', function(event
 
     const form = document.querySelector('.formulario');
 
-    fetch('https://java-crud-api-rest-production-d804.up.railway.app/Messages', {
+    fetch('http://localhost:8080/Messages', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',
@@ -73,3 +73,13 @@ document.getElementById('contactForm').addEventListener('submit', function(event
         console.error('Error:', error);
     });
 });
+
+function scrollToSection() {
+    // Selecciona la sección con el ID "miSeccion"
+    const section = document.getElementById('contactForm');
+
+    // Realiza el desplazamiento suave
+    section.scrollIntoView({
+        behavior: 'smooth'
+    });
+}
